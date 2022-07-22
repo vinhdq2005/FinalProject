@@ -976,5 +976,38 @@ a:focus {
 }
 /*# sourceMappingURL=style.css.map */
 
+#a{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
 
+#a button{
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  margin-right: 100px;
+}
 
+#a input{
+  /* padding: 10px 100px; */
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 400px;
+}
+
+#a button input:hover{
+  transition: 0.5s;
+  color: black;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgb(242, 238, 238);
+  opacity: 1;
+}

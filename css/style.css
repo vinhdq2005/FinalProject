@@ -134,6 +134,36 @@ a:focus {
   background-color: #8019c8;
 }
 
+.user_optio_box a{ 
+  display: flex ;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 5px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.user_optio_box a:nth-child(2){
+  justify-content: center;
+}
+
+
+.user_optio_box a:hover{
+  color: #ffffff;
+  background-color: #8019c8;
+}
+
+.user_optio_box a p{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+
 .custom_nav-container .nav_search-btn {
   width: 35px;
   height: 35px;
@@ -945,3 +975,6 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+

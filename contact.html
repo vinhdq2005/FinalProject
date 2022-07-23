@@ -70,19 +70,19 @@
               </li>
             </ul>
             <div class="user_optio_box">
-              <a href="" >
+              <a href="#" class="cart-icon">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 <p>Cart</p>
               </a>
-              <a href="">
+              <a href="./addproduct.html">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                 <p>Add++</p>
               </a>
-              <a href="" >
+              <a href="#" >
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <p>Log in</p> 
+                <p class="displayName">Log in</p> 
               </a>
-              <a href="" >
+              <a href="./updateAccount.html" >
                 <i class="fa fa-cog" aria-hidden="true"></i>
               </a>
             </div>
@@ -290,6 +290,30 @@
   </section>
   <!-- footer section -->
 
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCaOPStQb-LHXyg9KDtRCD2t1W-VgCiBRk",
+      authDomain: "shop-1eb2f.firebaseapp.com",
+      projectId: "shop-1eb2f",
+      storageBucket: "shop-1eb2f.appspot.com",
+      messagingSenderId: "781202449721",
+      appId: "1:781202449721:web:688e30ac4ee005db1b34e8",
+      measurementId: "G-G61BJJ2995",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
   <!-- jQery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <!-- popper js -->
@@ -303,6 +327,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+
+  <script src="./js/main.js"></script>
 
 </body>
 

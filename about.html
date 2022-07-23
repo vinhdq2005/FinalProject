@@ -68,19 +68,19 @@
               </li>
             </ul>
             <div class="user_optio_box">
-              <a href="" >
+              <a href="#" class="cart-icon">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 <p>Cart</p>
               </a>
-              <a href="">
+              <a href="./addproduct.html">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                 <p>Add++</p>
               </a>
-              <a href="" >
+              <a href="#" >
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <p>Log in</p> 
+                <p class="displayName">Log in</p> 
               </a>
-              <a href="" >
+              <a href="./updateAccount.html" >
                 <i class="fa fa-cog" aria-hidden="true"></i>
               </a>
             </div>
@@ -277,8 +277,68 @@
       </p>
     </div>
   </section>
+
+  <div class="cart">
+    <div class="cart-container">
+      <div class="cart-content">
+        <div class="cart-heading">
+          <i class="far fa-chevron-right close-cart"></i>
+          <h3 class="heading-text">Cart</h3>
+        </div>
+        <div class="cart-product">
+          <div class="product">
+            <div class="image-product-cart">
+
+            </div>
+            <div class="product-content-cart">
+              <h3 class="name-product-cart">I'm a product</h3>
+              <p class="price-product-cart">49.999d</p>
+              <div class="quantity">
+                <input type="number" min="0" value="1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-cart">
+          <div class="total-price">
+            <h3 class="total">Total: </h3>
+            <p class="total">49.999d</p>
+          </div>
+          <div class="viewcart-btn">
+            <button class="view-cart">View Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- footer section -->
 
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCaOPStQb-LHXyg9KDtRCD2t1W-VgCiBRk",
+      authDomain: "shop-1eb2f.firebaseapp.com",
+      projectId: "shop-1eb2f",
+      storageBucket: "shop-1eb2f.appspot.com",
+      messagingSenderId: "781202449721",
+      appId: "1:781202449721:web:688e30ac4ee005db1b34e8",
+      measurementId: "G-G61BJJ2995",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+  <script src="./js/main.js"></script>
   <!-- jQery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <!-- popper js -->

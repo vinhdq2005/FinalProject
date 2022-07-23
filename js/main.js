@@ -1,15 +1,23 @@
+// check xem đăng nhập hay chưa
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
-      console.log(user);
+      console.log(user.displayName);
+      renderUserName(user.displayName)
       // ...
     } else {
       // User is signed out
       // ...
     }
   });
+
+let renderUserName = (userName) => {
+  let displayName = document.querySelector(".displayName")
+
+  displayName.innerHTML = userName
+}
 
 loadProduct()
 
@@ -166,3 +174,22 @@ let renderProduct = (data) => {
   newArrival.innerHTML += html
   }
 }
+
+// cart
+let openCarticon = document.querySelector(".cart-icon")
+let closeCarticon = document.querySelector(".close-cart")
+let cartNavbar = document.querySelector(".cart")
+let cartContainer = document.querySelector(".cart-container")
+
+function showCart() {
+    cartNavbar.classList.add('open-cart')
+}
+function closeCart() {
+    cartNavbar.classList.remove('open-cart')
+}
+
+openCarticon.addEventListener('click', showCart)
+closeCarticon.addEventListener('click', closeCart)
+cartContainer.addEventListener('click', function(event) {
+    event.stopPropagation()
+})

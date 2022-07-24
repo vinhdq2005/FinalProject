@@ -1,61 +1,73 @@
 // check xem đăng nhập hay chưa
 firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      var uid = user.uid;
-      console.log(user.displayName);
-      renderUserName(user.displayName)
-      // ...
-    } else {
-      // User is signed out
-      // ...
-    }
-  });
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    var uid = user.uid;
+    console.log(user.displayName);
+    renderUserName(user.displayName);
+    let signOutButton = document.querySelector("#signOutBtn")
+    signOutButton.classList.remove("hidden")
+    // ...
+  } else {
+    // User is signed out
+    // ...
+
+  }
+});
+
+let signOut = () => {
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      // Sign-out successful.
+    })
+    .catch((error) => {
+      // An error happened.
+    });
+};
 
 let renderUserName = (userName) => {
-  let displayName = document.querySelector(".displayName")
+  let displayName = document.querySelector(".displayName");
 
-  displayName.innerHTML = userName
-}
+  displayName.innerHTML = userName;
+};
 
-loadProduct()
+loadProduct();
 
 async function loadProduct() {
-  let result = await firebase
-  .firestore()
-  .collection("shop")
-  .get();
+  let result = await firebase.firestore().collection("shop").get();
   // console.log(result);
-  let data = getDataFromDocs(result.docs)
+  let data = getDataFromDocs(result.docs);
   console.log(data[0].product.length);
   console.log(data);
-  renderProduct(data)
+  renderProduct(data);
 }
 
 let getDataFromDoc = (doc) => {
-  let data = doc.data()
-  data.id = doc.id
-  return data
-}
+  let data = doc.data();
+  data.id = doc.id;
+  return data;
+};
 
 let getDataFromDocs = (docs) => {
-  let result = []
+  let result = [];
   for (let doc of docs) {
-    let data = getDataFromDoc(doc)
-    result.push(data)
+    let data = getDataFromDoc(doc);
+    result.push(data);
   }
-  return result
-}
+  return result;
+};
 
 let renderProduct = (data) => {
-  let topSalesProduct = document.querySelector("#product_container_topSales")
-  let featureWatch = document.querySelector("#feature_watches")
-  let newArrival = document.querySelector("#new_arrivals")
+  let topSalesProduct = document.querySelector("#product_container_topSales");
+  let featureWatch = document.querySelector("#feature_watches");
+  let newArrival = document.querySelector("#new_arrivals");
 
-  topSalesProduct.innerHTML = ""
-  featureWatch.innerHTML = ""
-  newArrival.innerHTML = ""
+  topSalesProduct.innerHTML = "";
+  featureWatch.innerHTML = "";
+  newArrival.innerHTML = "";
 
   for (let i = 0; i < data[0].product.length; i++) {
     let html = `<div class="box">
@@ -91,9 +103,9 @@ let renderProduct = (data) => {
         Add To Cart
       </a>
     </div>
-  </div>`
+  </div>`;
 
-  topSalesProduct.innerHTML += html
+    topSalesProduct.innerHTML += html;
   }
 
   for (let i = 0; i < data[1].product.length; i++) {
@@ -130,9 +142,9 @@ let renderProduct = (data) => {
         Add To Cart
       </a>
     </div>
-  </div>`
+  </div>`;
 
-  featureWatch.innerHTML += html
+    featureWatch.innerHTML += html;
   }
 
   for (let i = 0; i < data[2].product.length; i++) {
@@ -169,27 +181,27 @@ let renderProduct = (data) => {
         Add To Cart
       </a>
     </div>
-  </div>`
+  </div>`;
 
-  newArrival.innerHTML += html
+    newArrival.innerHTML += html;
   }
-}
+};
 
 // cart
-let openCarticon = document.querySelector(".cart-icon")
-let closeCarticon = document.querySelector(".close-cart")
-let cartNavbar = document.querySelector(".cart")
-let cartContainer = document.querySelector(".cart-container")
+let openCarticon = document.querySelector(".cart-icon");
+let closeCarticon = document.querySelector(".close-cart");
+let cartNavbar = document.querySelector(".cart");
+let cartContainer = document.querySelector(".cart-container");
 
 function showCart() {
-    cartNavbar.classList.add('open-cart')
+  cartNavbar.classList.add("open-cart");
 }
 function closeCart() {
-    cartNavbar.classList.remove('open-cart')
+  cartNavbar.classList.remove("open-cart");
 }
 
-openCarticon.addEventListener('click', showCart)
-closeCarticon.addEventListener('click', closeCart)
-cartContainer.addEventListener('click', function(event) {
-    event.stopPropagation()
-})
+openCarticon.addEventListener("click", showCart);
+closeCarticon.addEventListener("click", closeCart);
+cartContainer.addEventListener("click", function (event) {
+  event.stopPropagation();
+});

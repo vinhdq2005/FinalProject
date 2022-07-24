@@ -10,3 +10,17 @@
 .btn {
     margin: 10px 0;
 }
+
+
+.mb-2 input{
+    margin: 10px 0;
+    height: 150px;
+}
+
+
+.row ::-webkit-input-placeholder{
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin: 10px 12px;
+    height: 45px;
+}

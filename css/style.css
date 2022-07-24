@@ -5,6 +5,10 @@ body {
   overflow-x: hidden;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .layout_padding {
   padding: 90px 0;
 }

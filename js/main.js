@@ -227,65 +227,65 @@ cartContainer.addEventListener("click", function (event) {
 // search
 
 
-// let searchForm = document.querySelector("#search-form")
-// let searchData = document.querySelector("#result")
+let searchForm = document.querySelector("#search-form")
+let searchData = document.querySelector("#result")
 
 
-// let renderDataSearch = (data) => {
-//   searchData.innerHTML = ""
+let renderDataSearch = (data) => {
+  searchData.innerHTML = ""
 
-//   for(let i = 0; i < data.length; i++) {
-//     let html = `<div class="box">
-//     <div class="box-content">
-//       <div class="img-box">
-//         <img src="${data[i].img}" alt="">
-//       </div>
-//       <div class="detail-box">
-//         <div class="text">
-//           <h6>
-//             ${data[i].name}
-//           </h6>
-//           <h5>
-//             <span>$</span> ${data[i].price}
-//           </h5>
-//         </div>
-//         <div class="like">
-//           <h6>
-//             Like
-//           </h6>
-//           <div class="star_container">
-//             <i class="fa fa-star" aria-hidden="true"></i>
-//             <i class="fa fa-star" aria-hidden="true"></i>
-//             <i class="fa fa-star" aria-hidden="true"></i>
-//             <i class="fa fa-star" aria-hidden="true"></i>
-//             <i class="fa fa-star" aria-hidden="true"></i>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     <div class="btn-box" >
-//       <a href="" class = "addToCart-btn">
-//         Add To Cart
-//       </a>
-//     </div>
-//   </div>`;
+  for(let i = 0; i < data.length; i++) {
+    let html = `<div class="box">
+    <div class="box-content">
+      <div class="img-box">
+        <img src="${data[i].img}" alt="">
+      </div>
+      <div class="detail-box">
+        <div class="text">
+          <h6>
+            ${data[i].name}
+          </h6>
+          <h5>
+            <span>$</span> ${data[i].price}
+          </h5>
+        </div>
+        <div class="like">
+          <h6>
+            Like
+          </h6>
+          <div class="star_container">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box" >
+      <a href="" class = "addToCart-btn">
+        Add To Cart
+      </a>
+    </div>
+  </div>`;
 
-//   searchData.innerHTML += html;
-//   }
-// }
+  searchData.innerHTML += html;
+  }
+}
 
-// searchForm.addEventListener("keyup", (e) => {
-//   // e.preventDefault()
-//   const searchString = e.target.value.toLowerCase()
+searchForm.addEventListener("keyup", (e) => {
+  // e.preventDefault()
+  const searchString = e.target.value.toLowerCase()
 
-//   const filterProduct = dataProductforSearch.filter((d) => {
-//     return (
-//       d.name.toLowerCase().includes(searchString) 
-//     )
-//   })
-//   renderDataSearch(filterProduct)
-//   console.log(filterProduct);
-// })
+  const filterProduct = dataProductforSearch.filter((d) => {
+    return (
+      d.name.toLowerCase().includes(searchString) 
+    )
+  })
+  renderDataSearch(filterProduct)
+  console.log(filterProduct);
+})
 
 // add to cart
 

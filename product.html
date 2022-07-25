@@ -83,6 +83,9 @@
               <a href="./updateAccount.html" >
                 <i class="fa fa-cog" aria-hidden="true"></i>
               </a>
+              <a href="#" onclick="signOut()" class="hidden" id="signOutBtn">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
         </nav>
@@ -93,120 +96,34 @@
 
   <!-- product section -->
 
+  <form id="search-form">
+    <input placeholder="enter" name="filmName" type="text">
+    <button type="submit">Search</button>
+  </form> 
+
   <section class="product_section ">
-    <form id="a">
-      <input placeholder="enter" name="filmName" type="text">
-      <button type="submit">Search</button>
-    </form> 
     <div class="container">
+      <div class="product_heading">
+        <h2>
+          Result
+        </h2>
+      </div>
+      <div class="product_container" id="result">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="product_section ">
+
+    <div class="container" >
       <div class="product_heading">
         <h2>
           Top Sale Watches
         </h2>
       </div>
-      <div class="product_container">
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w2.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w3.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
+      <div class="product_container" id="product_container_topSales">
+
       </div>
     </div>
   </section>
@@ -223,109 +140,8 @@
           Feature Watches
         </h2>
       </div>
-      <div class="product_container">
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w5.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w6.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
+      <div class="product_container" id="feature_watches">
+
       </div>
     </div>
   </section>
@@ -343,109 +159,8 @@
           New Arrivals
         </h2>
       </div>
-      <div class="product_container">
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w7.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w8.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box-content">
-            <div class="img-box">
-              <img src="images/w9.png" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="text">
-                <h6>
-                  Men's Watch
-                </h6>
-                <h5>
-                  <span>$</span> 300
-                </h5>
-              </div>
-              <div class="like">
-                <h6>
-                  Like
-                </h6>
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="">
-              Add To Cart
-            </a>
-          </div>
-        </div>
+      <div class="product_container" id="new_arrivals">
+
       </div>
     </div>
   </section>
@@ -602,6 +317,40 @@
     </div>
   </section>
   <!-- footer section -->
+
+  <div class="cart">
+    <div class="cart-container">
+      <div class="cart-content">
+        <div class="cart-heading">
+          <i class="fa fa-arrow-left close-cart" aria-hidden="true"></i>
+          <h3 class="heading-text">Cart</h3>
+        </div>
+        <div class="cart-product">
+          <div class="product">
+            <div class="image-product-cart">
+              <img src="./images/a-1.jpg" alt="">
+            </div>
+            <div class="product-content-cart">
+              <h3 class="name-product-cart">I'm a product</h3>
+              <p class="price-product-cart">49.999d</p>
+              <div class="quantity">
+                <input type="number" min="0" value="1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submit-cart">
+          <div class="total-price">
+            <h3 class="total">Total: </h3>
+            <p class="total">49.999d</p>
+          </div>
+          <div class="viewcart-btn">
+            <button class="view-cart">View Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>

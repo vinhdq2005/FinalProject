@@ -980,7 +980,7 @@ a:focus {
 }
 /*# sourceMappingURL=style.css.map */
 
-#a{
+#search-form{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -988,7 +988,7 @@ a:focus {
   align-items: center;
 }
 
-#a button{
+#search-form button{
   height: 40px;
   border-radius: 6px;
   border: none;
@@ -996,7 +996,7 @@ a:focus {
   margin-right: 100px;
 }
 
-#a input{
+#search-form input{
   /* padding: 10px 100px; */
   border-radius: 6px;
   border: none;
@@ -1007,7 +1007,7 @@ a:focus {
   width: 400px;
 }
 
-#a button input:hover{
+#search-form button input:hover{
   transition: 0.5s;
   color: black;
   cursor: pointer;

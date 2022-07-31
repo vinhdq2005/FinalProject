@@ -1,0 +1,325 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: aquamarine !important;
+}
+
+.container {
+  margin: 60px auto;
+  background: #fff;
+  padding: 0 !important;
+  border-radius: 7px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.setting-tray {
+  background: #eee;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+
+.no-gutters {
+  padding: 0 !important;
+}
+
+.setting-tray i {
+  margin-top: 10px;
+  font-size: 25px;
+  color: gray;
+  margin-left: 14px;
+}
+
+.setting-tray i:hover {
+  color: #74b9ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.setting-tray #userName {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.search-box {
+  background: #fafafa;
+  padding: 10px 13px;
+}
+
+.search-box .input-wrapper {
+  background: #fff;
+  border-radius: 40px;
+}
+
+.search-box i {
+  color: gray;
+  vertical-align: middle;
+  margin-left: 7px;
+}
+
+input {
+  border: none;
+  border-radius: 40px;
+  width: 80%;
+  outline: none;
+  padding-left: 10px;
+}
+
+input::placeholder {
+  color: #e3e3e3;
+  font-weight: 300;
+}
+
+.list-friend {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.list-friend::-webkit-scrollbar {
+  width: 5px !important;
+}
+.list-friend::-webkit-scrollbar-track {
+  background: white !important;
+}
+.list-friend::-webkit-scrollbar-thumb {
+  background: gray !important;
+  border-radius: 5px !important;
+}
+
+.friend-drawer {
+  padding: 10px 15px;
+  display: flex;
+  vertical-align: baseline;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.friend-drawer.friend-drawer--grey {
+  background: #eee;
+}
+
+.friend-drawer .text {
+  margin-left: 12px;
+  width: 70%;
+}
+
+.friend-drawer h6 {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.friend-drawer p {
+  margin: 0;
+}
+
+.friend-drawer .time {
+  color: grey;
+}
+
+.friend-drawer.friend-drawer--onhover:hover {
+  background-color: #74b9ff;
+  cursor: pointer;
+}
+
+.friend-drawer.friend-drawer--onhover:hover h6,
+.friend-drawer.friend-drawer--onhover:hover p,
+.friend-drawer.friend-drawer--onhover:hover .time {
+  color: #fff !important;
+}
+
+hr {
+  margin: 5px auto !important;
+  width: 60%;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  background: #eee;
+  margin: 10px 30px;
+  border-radius: 9px;
+  position: relative;
+  animation: fadeIn 1s ease-in;
+}
+
+.chat-bubble--blue {
+  background: #74b9ff;
+  color: #fff;
+}
+
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 0;
+  margin-top: -10px;
+}
+
+.chat-bubble--left::after {
+  left: 0;
+  border-right-color: #eee;
+  border-left: 0;
+  margin-left: -20px;
+}
+
+.chat-bubble--right::after {
+  right: 0;
+  border-left-color: #74b9ff;
+  border-right: 0;
+  margin-right: -20px;
+}
+
+.chat-bubble p {
+  color: #6c757d;
+  margin: 0 !important;
+}
+
+.chat-box-tray {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-top: 19px;
+}
+
+.chat-box-tray input {
+  margin: 0 10px;
+  padding: 6px 2px;
+}
+
+.chat-box-tray i {
+  color: gray;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.chat-box-tray i:last-of-type {
+  margin-left: 25px;
+}
+
+.chat-panel {
+    height: calc(500px + 44px - 75px);
+    
+    overflow-y: scroll;
+    
+} 
+  .chat-panel::-webkit-scrollbar {
+    width: 5px !important;
+  }
+  .chat-panel::-webkit-scrollbar-track {
+    background: white !important;
+  }
+  .chat-panel::-webkit-scrollbar-thumb {
+    background: gray !important;
+    border-radius: 5px !important;
+  }
+
+.col-md-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* From uiverse.io by @satyamchaudharydev */
+/* The switch - the box around the slider */
+.switch {
+  /* --moon-mask: ; */
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background: #303136;
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -5px 0 0 #a3dafb;
+}
+
+body.darkmode .container,
+body.darkmode .chat-panel,
+body.darkmode .setting-tray,
+body.darkmode .search-box,
+body.darkmode .friend-drawer,
+body.darkmode .chat-box-tray {
+  background-color: #1c1e21;
+}
+
+body.darkmode .list-friend::-webkit-scrollbar {
+  width: 5px !important;
+}
+body.darkmode  .list-friend::-webkit-scrollbar-track {
+  background: #1c1e21 !important;
+}
+body.darkmode  .list-friend::-webkit-scrollbar-thumb {
+  background: gray !important;
+  border-radius: 5px !important;
+}
+
+body.darkmode .chat-panel::-webkit-scrollbar {
+  width: 5px !important;
+}
+body.darkmode .chat-panel::-webkit-scrollbar-track {
+  background: #1c1e21 !important;
+}
+body.darkmode .chat-panel::-webkit-scrollbar-thumb {
+  background: gray !important;
+  border-radius: 5px !important;
+}
+
+body.darkmode .friend-drawer h6,
+body.darkmode .friend-drawer p,
+body.darkmode .setting-tray #userName  {
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: #eee;
+  transition: 0.5ms;
+}
+

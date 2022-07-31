@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1>Sign Up</h1>
+        <form id="signup" action="">
+          <div class="input_wrapper">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="username" placeholder="User name" />
+          </div>
+          <p class="error" id="username_err"></p>
+          <div class="input_wrapper">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="text" name="email" placeholder="Email" />
+          </div>
+          <p class="error" id="email_err"></p>
+          <div class="input_wrapper">
+            <i class="fa-solid fa-key"></i>
+            <input
+              id="ps"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <p class="error" id="password_err"></p>
+          <div class="input_wrapper">
+            <i class="fa-solid fa-circle-check"></i>
+            <input
+              id="cfps"
+              type="password"
+              name="cfpassword"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <p class="error" id="cfpassword_err"></p>
+
+          <div class="show_password_wrapper">
+            <input type="checkbox" onclick="showPassword()" /><span
+              >Show Password</span
+            >
+          </div>
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+      <div class="right">
+        <div>
+          <lottie-player
+            src="https://assets7.lottiefiles.com/packages/lf20_yqyt4zdn.json"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+        <a style="margin-top: 60px" href="../signin/index.html"
+          >I am already a member</a
+        >
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://kit.fontawesome.com/18d5300895.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let showPassword = () => {
+        let password = document.querySelector("#ps");
+        let cfpassword = document.querySelector("#cfps");
+
+        if (password.type === "password") {
+          password.type = "text";
+          cfpassword.type = "text";
+        } else {
+          password.type = "password";
+          cfpassword.type = "password";
+        }
+      };
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDBrgUSbDei03indX-Uf0ujJr0xiG5pH5g",
+        authDomain: "message-382e4.firebaseapp.com",
+        projectId: "message-382e4",
+        storageBucket: "message-382e4.appspot.com",
+        messagingSenderId: "763315301869",
+        appId: "1:763315301869:web:cd272abf789220087acbe4",
+        measurementId: "G-TS1RBW30E0",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
